@@ -21,7 +21,7 @@ RUN PACKAGES="ca-certificates ruby procps curl pcre libstdc++ libexecinfo ruby-r
     passenger-config install-standalone-runtime --auto --url-root=fake --connect-timeout=1 && \
     passenger-config build-native-support && \
 # gem bundler
-    gem install bundler io-console --no-rdoc --no-ri && \
+    gem install bundler io-console rack --no-rdoc --no-ri && \
 # app directory
     adduser -D -S app && \
     mkdir -p /app $BUNDLE_PATH && \
